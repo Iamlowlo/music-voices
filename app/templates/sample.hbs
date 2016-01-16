@@ -1,0 +1,13 @@
+<div id="sample_info" class="col_lg_8_12">
+	<h2>{{model.name}}</h2>
+	<h3>{{model.type}}</h3>
+	<div class="sample_content column_container">
+		<img src="{{model.image}}">
+		{{#if model.comment}}
+		<p class="comment">{{model.comment}}</p>
+		{{/if}}
+	</div>
+	<iframe width="560" height="315" src="{{model.video}}" frameborder="0" allowfullscreen></iframe>
+</div>
+{{outlet}}
+

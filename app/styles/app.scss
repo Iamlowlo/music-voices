@@ -1,0 +1,128 @@
+@import "variables";
+@import 'reset';
+@import 'fonts';
+@import 'mixins';
+@import 'utils';
+@import url(https://fonts.googleapis.com/css?family=Muli|Montserrat:400,700);
+
+@include get_columns(12);
+
+*{
+	box-sizing:border-box;
+}
+h1{
+	font-size: 1.8em;
+	@extend %title_font;
+}
+h2{
+	font-size: 1.6em;
+	@extend %title_font;
+}
+h3{
+	font-size: 1.4em;
+	@extend %title_font;
+}
+body{
+	@extend %body_font;
+	color: $polite_black;
+	background: $polite_white;
+}
+li{
+	list-style: none;
+	margin-bottom: 0.6em;
+}
+dt,dd{
+	display: inline-block;
+	margin-bottom: 0.2em;
+}
+dt{
+	width: 70px;
+}
+dd{
+	width: calc(100% - 70px);
+}
+a{
+	text-decoration: none;
+	color:$color_1;
+	&:visited{
+		color: $color_accent_1;
+	}
+}
+
+input:not([type='checkbox']):not([type='checkbox']),
+textarea{
+	width :100%;
+	margin-top: 0.3em;
+	margin-bottom: 2em;
+	padding: 0.4em 0.4em 0.2em;
+	font-size: 1em;
+	font-weight: 300;
+	color: $color_2;
+}
+input{
+	border:none;
+	border-bottom: 1px solid $color_4;
+}
+textarea{
+	resize:vertical;
+	min-height: 4em;
+	border-color: $color_4;
+	padding: 0.3em 0.4em;
+}
+
+
+
+#main_header{
+	position: relative;
+	padding: 2em 2.5em 1.8em;
+	background: $color_4;
+	color: $polite_white;
+	border-top: 5px solid $color_3;
+	h1 a{
+		color: $polite_white;
+	}
+	.btn{
+		position: absolute;
+		bottom: 0.5em;
+		right: 2em;
+	}
+}
+#main_container{
+	padding: 1.8em 2.5em;
+}
+#sample_list{
+	li{
+		position: relative;
+		.edit_sample{
+			position: absolute;
+			top: 0;
+			bottom:0;
+			right: 100%;
+			margin:auto 0em auto 0;
+		}
+	}
+}
+#toggle_edition{
+	position: fixed;
+	bottom: 0;
+	right: 5%;
+}
+#sample_info{
+	h2{
+		color: $color_1;
+	}
+	h3{
+		color: $color_2;
+	}
+	img{
+		max-width: 200px;
+		margin-right: 2em;
+		margin-right: 1em;
+		float: left;
+	}
+	.sample_content{
+		padding: 2em 1em;
+	}
+	.comment{
+	}
+}

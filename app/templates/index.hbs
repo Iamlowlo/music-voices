@@ -1,0 +1,17 @@
+{{outlet}}
+<ul id="sample_list">
+{{#each model as |sample|}}
+	<li class="col_xs_6_12">
+		<dl>
+			<dt>Nombre</dt>{{!-- 
+		--}}<dd>{{#link-to "sample" sample}}{{sample.name}}{{/link-to}}</dd>
+			<dt>Tipo</dt>{{!-- 
+		--}}<dd>{{#link-to "sample" sample}}{{sample.type}}{{/link-to}}</dd>
+		</dl>
+		{{#if isEditionMode}}
+		{{#link-to "edit-sample" sample class="edit_sample btn primary icon_rounded icon_sm icon-edit"}}{{/link-to}}
+		{{/if}}
+	</li>
+{{/each}}
+</ul>
+<span id="toggle_edition" class="btn accent{{inline-if isEditionMode ' active' ''}}" {{action "toggleEditionMode"}}>Edit</span>

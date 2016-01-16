@@ -1,0 +1,68 @@
+%clearfix,
+.clearfix{
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+}
+%title_font{
+	font-family: 'Montserrat', Arial, sans-serif;
+}
+%body_font{
+	font-family: 'Muli', Arial, sans-serif;
+}
+
+.column_container{
+	@extend %clearfix;
+	margin-left: -1*$column_gap;
+	margin-right: -1*$column_gap;
+}
+.btn{
+	display: inline-block;
+	padding: 0.5em 0.9em;
+	cursor: pointer;
+	&.icon_rounded{
+		font-size: 1.3em;
+		height: 1.8em;
+		width: 1.9em;
+		padding: 0;
+		border-radius: 100%;
+		line-height: 1.7em;
+		text-align: center;
+	}
+	&.icon_sm{
+		font-size: 0.8em;
+	}
+	&.primary{
+		background: $color_2;
+		color: $polite_white;
+		&:hover{
+			background: $color_3;
+		}
+		&.active{
+			background: $color_accent_2;
+			color: $polite_black;
+		}
+	}
+	&.accent{
+		background: $color_accent_2;
+		color: $polite_white;
+		&:hover{
+			background: $color_accent_3;
+		}
+		&.active{
+			opacity: 0.5;
+		}
+	}
+	&.alert{
+		background: $red_alert;
+		color: $polite_white;
+		&:hover{
+			background: darken($red_alert,10);
+		}
+	}
+}

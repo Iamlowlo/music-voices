@@ -1,0 +1,31 @@
+{{outlet}}
+<ul class="column_container">
+	<li class="col_md_8_12">
+		<label for="name">Nombre</label>
+		{{input name="name" id="name" value=name}}
+	</li>
+	<li class="col_md_8_12">
+		<label for="type">Tipo</label>
+		{{input name="type" id="type" value=type}}
+	</li>
+	<li class="col_md_8_12">
+		<label for="image">Imagen</label>
+		{{input name="image" id="image" value=image}}
+	</li>
+	<li class="col_md_6_12">
+		<label for="video">Video (ID Youtube)</label>
+		{{input name="video" id="video" value=video}}
+	</li>
+	<li class="col_md_2_12">
+		<label for="videoStart">Inicio del video</label>
+		{{input name="videoStart" id="videoStart" value=videoStart}}
+	</li>
+	<li class="col_md_8_12">
+		<label for="comment">Comentario (opcional)</label>
+		{{textarea name="comment" id="comment" value=comment}}
+	</li>
+</ul>
+
+<span class="btn primary"{{action "save"}}>Guardar y seguir</span>
+<span class="btn primary"{{action "saveAndGo"}}>Guardar e ir al inicio</span>
+<span class="btn alert"{{action "reset"}}>Cancelar</span>

@@ -1,3 +1,7 @@
-<h2 id="title">Welcome to Ember</h2>
-
+<header id="main_header">
+	<h1>{{#link-to 'index'}}Tipos de voces en la música{{/link-to}}</h1>
+	{{#link-to 'add-sample' class="btn accent icon_rounded icon-add"}}{{/link-to}}
+</header>
+<div id="main_container">
 {{outlet}}
+</div>
