@@ -1,7 +1,8 @@
 # Music-voices
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a web app to teach the different kind of voices present on music.
+Allows the user to list, view details, create and edit different samples of this voices.
+Built in EmberJS and being feed from a Firebase data base.
 
 ## Prerequisites
 
@@ -11,6 +12,8 @@ You will need the following things properly installed on your computer.
 * [Node.js](http://nodejs.org/) (with NPM)
 * [Bower](http://bower.io/)
 * [Ember CLI](http://www.ember-cli.com/)
+* [EmberFire](https://www.firebase.com/docs/web/libraries/ember/)
+* [Ember CLI Sass](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 
 ## Installation
