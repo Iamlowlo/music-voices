@@ -1,4 +1,4 @@
-{{outlet}}
+{{#if session.currentUser}}
 <ul class="column_container">
 	<li class="col_md_8_12">
 		<label for="name">Nombre</label>
@@ -25,7 +25,10 @@
 		{{textarea name="comment" id="comment" value=model.comment}}
 	</li>
 </ul>
-
 <span class="btn primary"{{action "save"}}>Guardar y seguir</span>
 <span class="btn primary"{{action "saveAndGo"}}>Guardar e ir al inicio</span>
 <span class="btn alert"{{action "reset"}}>Cancelar</span>
+{{else}}
+<h2>Necesitas ser administrador para ver esta página</h2>	
+{{/if}}
+{{outlet}}

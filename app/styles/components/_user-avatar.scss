@@ -1,0 +1,53 @@
+.user_avatar{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  .circle_cover{
+    height: 100%;
+    width: 100%;
+  }
+  img{
+    max-width: 100%
+  }
+  .user_name{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.1em;
+    transition: bottom ease-in-out 0.3s;
+  }
+
+  .log_out{
+    position: absolute;
+    top: 0.6em;
+    right: 0.6em;
+    width: 0;
+    height: 0;
+    transform:translate(50%,-50%);
+    font-size: 1.2em;
+    transition: width ease-in-out 0.3s, height ease-in-out 0.3s;
+    span{
+      display: inline-block;
+      cursor: pointer;
+      vertical-align: middle;
+      text-align: center;
+      line-height: 1.8em;
+      background: $red_alert;
+      color: $polite_white;
+      width: 1.8em;
+      height: 1.8em;
+    }
+  }
+  &:hover{
+    .user_name{
+      bottom: 30px;
+    }
+    .log_out{
+      width: 1.8em;
+      height: 1.8em;
+
+    }
+  }
+}

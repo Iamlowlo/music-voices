@@ -1,6 +1,13 @@
 <header id="main_header">
-	<h1>{{#link-to 'index'}}Tipos de voces en la música{{/link-to}}</h1>
-	{{#link-to 'add-sample' class="btn accent icon_rounded icon-add"}}{{/link-to}}
+{{log session}}
+{{log session.currentUser}}
+  <h1>{{#link-to 'index'}}Tipos de voces en la música{{/link-to}}</h1>
+  {{#if session.currentUser}}
+    {{user-avatar name=session.currentUser.name picture=session.currentUser.picture signUserOut='signOut'}}
+    {{#link-to 'add-sample' id="add_sample" class="btn accent icon_rounded icon-playlist_add"}}{{/link-to}}
+  {{else}}
+    <button id="sign_in" class="btn accent reset"{{action 'signIn' "google"}}>Log in</button>
+  {{/if}}
 </header>
 <div id="main_container">
 {{outlet}}

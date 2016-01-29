@@ -5,6 +5,8 @@
 @import 'utils';
 @import url(https://fonts.googleapis.com/css?family=Muli|Montserrat:400,700);
 
+@import 'components/user-avatar';
+
 @include get_columns(12);
 
 *{
@@ -78,14 +80,26 @@ textarea{
 	background: $color_4;
 	color: $polite_white;
 	border-top: 5px solid $color_3;
+	z-index: 1;
 	h1 a{
 		color: $polite_white;
 	}
-	.btn{
+	.user_avatar{
 		position: absolute;
-		bottom: 0.5em;
-		right: 2em;
+		right: 3em;
+		bottom: -50px;
 	}
+}
+#add_sample{
+	position: absolute;
+	bottom: 0.5em;
+	right: 8em;
+}
+#sign_in{
+	position: absolute;
+	bottom: -1em;
+	right: 1.2em;
+	border:2px solid $color_4;
 }
 #main_container{
 	padding: 1.8em 2.5em;

@@ -49,7 +49,7 @@
 		}
 	}
 	&.accent{
-		background: $color_accent_2;
+		background: $color_accent_1;
 		color: $polite_white;
 		&:hover{
 			background: $color_accent_3;
@@ -65,4 +65,12 @@
 			background: darken($red_alert,10);
 		}
 	}
+	&.reset{
+		border:none;
+		font-size: $font_size_base;
+	}
+}
+.circle_cover{
+  overflow: hidden;
+  border-radius: 100%;
 }

@@ -6,7 +6,10 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
-    firebase: 'https://music-voices.firebaseio.com/',
+    firebase: 'https://music-voices-dev.firebaseio.com/',
+    torii: {
+      sessionServiceName : 'session'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
